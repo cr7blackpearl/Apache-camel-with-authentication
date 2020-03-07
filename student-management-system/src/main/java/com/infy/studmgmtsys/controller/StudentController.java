@@ -21,7 +21,6 @@ public class StudentController {
 	@PostMapping()
 	public Student saveStudent(@RequestBody Student stud) {
 		Student savedStudent = studentService.save(stud);
-
 		return savedStudent;
 	}
 
