@@ -1,0 +1,13 @@
+camel:
+  rest:
+    port: 9090
+    api-component: servlet
+    api-host: localhost
+
+server:
+    port: 9090
+    
+student:
+    get:
+      url: http://localhost:8091/api/student/
+      
