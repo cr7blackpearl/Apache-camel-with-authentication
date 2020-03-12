@@ -33,7 +33,7 @@ public class StudentRoute extends RouteBuilder {
 	private void getStudentById() {
 		rest().get("/student/{id}").produces(MediaType.APPLICATION_JSON_VALUE).route()
 				.toD(camelConfig.STUDENT_API + "${header.id}?bridgeEndpoint=true").unmarshal(format)
-				.log("Camel GET for retriving student......");
+				.log("Camel GET for retriving Student......");
 	}
 
 	private void addStudent() {
