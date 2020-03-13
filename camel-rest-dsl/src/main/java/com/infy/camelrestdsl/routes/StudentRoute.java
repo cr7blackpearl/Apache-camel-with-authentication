@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import com.infy.camelrestdsl.config.CamelConfig;
 import com.infy.camelrestdsl.models.Student;
+import com.infy.camelrestdsl.models.StudentEntity;
 
 @Component
 public class StudentRoute extends RouteBuilder {
@@ -19,9 +20,18 @@ public class StudentRoute extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		camelRestConfig();
+		getAllStudent();
 		getStudentById();
 		addStudent();
 
+	}
+
+	private void getAllStudent() {
+		JacksonDataFormat format = new JacksonDataFormat(StudentEntity.class);
+		rest().get("/student").produces(MediaType.APPLICATION_JSON_VALUE).route()
+				.toD(camelConfig.STUDENT_API + "?bridgeEndpoint=true").unmarshal(format)
+				.log("Camel GET for retriving All Student......");
+		
 	}
 
 	private void camelRestConfig() {

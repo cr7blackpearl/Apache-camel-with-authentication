@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.infy.studmgmtsys.model.Student;
+import com.infy.studmgmtsys.model.StudentEntity;
 import com.infy.studmgmtsys.service.StudentService;
 
 @RestController
@@ -31,8 +32,8 @@ public class StudentController {
 		return studentService.findStudentById(id);
 	}
 	
-	@GetMapping("/all")
-	public List<Student> getAllStudents() {
+	@GetMapping()
+	public StudentEntity getAllStudents() {
 		return studentService.getAllStudents();
 	}
 	

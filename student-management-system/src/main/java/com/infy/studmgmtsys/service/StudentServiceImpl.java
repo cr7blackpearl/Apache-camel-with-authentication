@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.infy.studmgmtsys.dao.StudentDao;
 import com.infy.studmgmtsys.model.Student;
+import com.infy.studmgmtsys.model.StudentEntity;
 
 @Service
 public class StudentServiceImpl implements StudentService{
@@ -30,8 +31,12 @@ public class StudentServiceImpl implements StudentService{
 	}
 	
 	@Override
-	public List<Student> getAllStudents() {
-		return studentDao.findAll();
+	public StudentEntity getAllStudents() {
+		List<Student> studentList = studentDao.findAll();
+		StudentEntity studObj=new StudentEntity();
+		studObj.setStudetnList(studentList);
+		
+		return studObj;
 		
 	}
 	
