@@ -1,4 +1,4 @@
-package com.infy.camelrestdsl.config;
+package com.infy.camelrestdsl.auth.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,8 +13,8 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.infy.camelrestdsl.filters.JwtRequestFilter;
-import com.infy.camelrestdsl.service.MyUserDetailsService;
+import com.infy.camelrestdsl.auth.filters.JwtRequestFilter;
+import com.infy.camelrestdsl.auth.services.MyUserDetailsService;
 
 @Configuration
 @EnableWebSecurity

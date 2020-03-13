@@ -1,4 +1,4 @@
-package com.infy.camelrestdsl.dto;
+package com.infy.camelrestdsl.models;
 
 public class Student {
 

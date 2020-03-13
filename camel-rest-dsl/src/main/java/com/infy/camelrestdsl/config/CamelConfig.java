@@ -14,7 +14,7 @@ public class CamelConfig {
 	@Value("${camel.rest.api-host}")
 	public String CAMEL_HOST;
 	
-	@Value("${student.get.url}")
+	@Value("${students.url}")
 	public String STUDENT_API;
 	
 

@@ -1,5 +1,6 @@
 package com.infy.studmgmtsys.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,4 +28,11 @@ public class StudentServiceImpl implements StudentService{
 	public Student save(Student student) {
 		return studentDao.save(student);
 	}
+	
+	@Override
+	public List<Student> getAllStudents() {
+		return studentDao.findAll();
+		
+	}
+	
 }

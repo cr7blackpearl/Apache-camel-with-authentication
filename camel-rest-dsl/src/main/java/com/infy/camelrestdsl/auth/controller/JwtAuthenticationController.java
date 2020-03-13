@@ -1,4 +1,4 @@
-package com.infy.camelrestdsl.resource;
+package com.infy.camelrestdsl.auth.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.infy.camelrestdsl.models.AuthenticationRequest;
-import com.infy.camelrestdsl.models.AuthenticationResponse;
-import com.infy.camelrestdsl.service.MyUserDetailsService;
-import com.infy.camelrestdsl.util.JwtUtil;
+import com.infy.camelrestdsl.auth.models.AuthenticationRequest;
+import com.infy.camelrestdsl.auth.models.AuthenticationResponse;
+import com.infy.camelrestdsl.auth.services.MyUserDetailsService;
+import com.infy.camelrestdsl.auth.utils.JwtUtil;
 
 @RestController
 @CrossOrigin

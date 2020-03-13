@@ -1,4 +1,4 @@
-package com.infy.camelrestdsl.models;
+package com.infy.camelrestdsl.auth.models;
 
 public class AuthenticationRequest {
 	private String userName;

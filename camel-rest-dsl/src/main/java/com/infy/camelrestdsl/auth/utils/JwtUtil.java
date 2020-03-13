@@ -1,4 +1,4 @@
-package com.infy.camelrestdsl.util;
+package com.infy.camelrestdsl.auth.utils;
 
 import java.util.Date;
 import java.util.HashMap;

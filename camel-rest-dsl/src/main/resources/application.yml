@@ -6,8 +6,8 @@ camel:
 
 server:
     port: 9090
-    
-student:
-    get:
-      url: http://localhost:8091/api/student/
+
+students:
+    url: http://localhost:8091/api/student/
+      
       

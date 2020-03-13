@@ -15,13 +15,13 @@ public class StudentClientServiceImpl implements StudentClientService{
 	@Override
 	public Student getStudentById(Long id) {
 
-		return restTemplate.getForObject("http://localhost:9090/getStudent/"+id, Student.class);
+		return restTemplate.getForObject("http://localhost:9090/student/"+id, Student.class);
 	}
 
 	@Override
 	public Student saveStudent(Student stud) {
 
-		return restTemplate.postForObject("http://localhost:9090/addStudent", stud, Student.class);
+		return restTemplate.postForObject("http://localhost:9090/student", stud, Student.class);
 	}
 
 	

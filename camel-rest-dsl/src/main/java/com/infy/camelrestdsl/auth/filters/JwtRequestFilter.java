@@ -1,4 +1,4 @@
-package com.infy.camelrestdsl.filters;
+package com.infy.camelrestdsl.auth.filters;
 
 import java.io.IOException;
 
@@ -15,8 +15,8 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.infy.camelrestdsl.service.MyUserDetailsService;
-import com.infy.camelrestdsl.util.JwtUtil;
+import com.infy.camelrestdsl.auth.services.MyUserDetailsService;
+import com.infy.camelrestdsl.auth.utils.JwtUtil;
 
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {

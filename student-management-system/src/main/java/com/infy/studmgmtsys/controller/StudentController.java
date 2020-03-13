@@ -1,5 +1,7 @@
 package com.infy.studmgmtsys.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +28,12 @@ public class StudentController {
 
 	@GetMapping("/{id}")
 	public Student getStudentDetails(@PathVariable Long id) {
-		System.out.println("In Student-management GET call.....");
 		return studentService.findStudentById(id);
 	}
+	
+	@GetMapping("/all")
+	public List<Student> getAllStudents() {
+		return studentService.getAllStudents();
+	}
+	
 }

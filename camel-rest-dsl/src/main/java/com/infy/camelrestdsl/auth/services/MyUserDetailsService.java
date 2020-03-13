@@ -1,4 +1,4 @@
-package com.infy.camelrestdsl.service;
+package com.infy.camelrestdsl.auth.services;
 
 import java.util.ArrayList;
 
